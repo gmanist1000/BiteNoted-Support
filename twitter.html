@@ -72,11 +72,19 @@
           class="twitter-timeline"
           data-height="650"
           data-theme="light"
-          href="https://twitter.com/BiteNoted?ref_src=twsrc%5Etfw"
+          data-dnt="true"
+          href="https://twitter.com/BiteNoted"
           >Tweets by BiteNoted</a
         >
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       </section>
     </main>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script>
+      window.addEventListener("load", function () {
+        if (window.twttr && window.twttr.widgets && window.twttr.widgets.load) {
+          window.twttr.widgets.load();
+        }
+      });
+    </script>
   </body>
 </html>
