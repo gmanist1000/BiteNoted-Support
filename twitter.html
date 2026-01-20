@@ -68,22 +68,41 @@
       </header>
 
       <section class="card">
-        <a
-          class="twitter-timeline"
-          data-height="650"
-          data-theme="light"
-          data-dnt="true"
-          href="https://twitter.com/BiteNoted"
-          >Tweets by BiteNoted</a
-        >
+        <div id="x-timeline" aria-label="BiteNoted posts"></div>
       </section>
     </main>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <script>
-      window.addEventListener("load", function () {
-        if (window.twttr && window.twttr.widgets && window.twttr.widgets.load) {
-          window.twttr.widgets.load();
+      window.twttr = (function (d, s, id) {
+        var js;
+        var fjs = d.getElementsByTagName(s)[0];
+        var t = window.twttr || {};
+        if (d.getElementById(id)) {
+          return t;
         }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+        t._e = [];
+        t.ready = function (f) {
+          t._e.push(f);
+        };
+        return t;
+      })(document, "script", "twitter-wjs");
+
+      window.twttr.ready(function (twttr) {
+        twttr.widgets.createTimeline(
+          {
+            sourceType: "profile",
+            screenName: "BiteNoted",
+          },
+          document.getElementById("x-timeline"),
+          {
+            height: 650,
+            theme: "light",
+            dnt: true,
+          }
+        );
       });
     </script>
   </body>
