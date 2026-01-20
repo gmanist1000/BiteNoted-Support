@@ -53,6 +53,15 @@
         padding: 20px 22px;
         box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
       }
+      .timeline-fallback {
+        display: none;
+      }
+      .timeline-fallback.show {
+        display: block;
+      }
+      .timeline-placeholder {
+        min-height: 650px;
+      }
     </style>
   </head>
   <body>
@@ -68,7 +77,11 @@
       </header>
 
       <section class="card">
-        <div id="x-timeline" aria-label="BiteNoted posts"></div>
+        <div id="x-timeline" class="timeline-placeholder" aria-label="BiteNoted posts"></div>
+        <p id="timeline-fallback" class="timeline-fallback">
+          The embedded timeline could not load. View posts at
+          <a href="https://x.com/BiteNoted">x.com/BiteNoted</a>.
+        </p>
       </section>
     </main>
     <script>
@@ -102,8 +115,18 @@
             theme: "light",
             dnt: true,
           }
-        );
+        ).then(function (el) {
+          if (!el) {
+            document.getElementById("timeline-fallback").classList.add("show");
+          }
+        });
       });
+      window.setTimeout(function () {
+        var timeline = document.getElementById("x-timeline");
+        if (!timeline || timeline.children.length === 0) {
+          document.getElementById("timeline-fallback").classList.add("show");
+        }
+      }, 2500);
     </script>
   </body>
 </html>
