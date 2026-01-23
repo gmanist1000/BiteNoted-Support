@@ -29,6 +29,41 @@
         margin-bottom: 24px;
         font-size: 0.95rem;
       }
+      .banner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 14px 18px;
+        border-radius: 16px;
+        background: linear-gradient(135deg, #fff4e5 0%, #fef7ed 100%);
+        border: 1px solid #f0dcc4;
+        color: #7a4b12;
+        box-shadow: 0 10px 22px rgba(122, 75, 18, 0.12);
+        margin-bottom: 24px;
+      }
+      .banner strong {
+        font-size: 1.05rem;
+      }
+      .banner span {
+        font-size: 0.95rem;
+      }
+      .banner .pill {
+        background: #7a4b12;
+        color: #fff;
+        padding: 4px 10px;
+        border-radius: 999px;
+        font-size: 0.72rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+      @media (max-width: 600px) {
+        .banner {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
       header {
         margin-bottom: 32px;
       }
@@ -235,6 +270,13 @@
       </nav>
 
       <header>
+        <div class="banner">
+          <div>
+            <strong>Coming soon</strong>
+            <span>— BiteNoted is still under construction and will be available soon.</span>
+          </div>
+          <div class="pill">Under Construction</div>
+        </div>
         <div class="hero">
           <div class="hero-icon">
             <img src="assets/BiteNoted-Icon-256.png" alt="BiteNoted app icon" width="84" height="84" />
@@ -243,9 +285,9 @@
             <h1>BiteNoted Features</h1>
             <p class="meta">A map-first food journal for logging meals, photos, and places.</p>
           </div>
-          <a class="app-store-badge" href="#" aria-label="Download on the App Store">
+          <span class="app-store-badge" aria-label="Download on the App Store">
             <img src="assets/app-store-badge-us.svg" alt="Download on the App Store" />
-          </a>
+          </span>
         </div>
       </header>
 
