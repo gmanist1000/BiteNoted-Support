@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="BiteNoted FAQ and help center for iCloud sync, imports, widgets, Privacy Lock, and purchases." />
+    <title>BiteNoted FAQ / Help</title>
+    <style>
+      :root {
+        color-scheme: light;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+        color: #1c1c1c;
+        background: #f6f4f1;
+      }
+      .wrap {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 48px 24px 40px;
+      }
+      nav {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 24px;
+        font-size: 0.95rem;
+      }
+      .banner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 14px 18px;
+        border-radius: 16px;
+        background: linear-gradient(135deg, #fff4e5 0%, #fef7ed 100%);
+        border: 1px solid #f0dcc4;
+        color: #7a4b12;
+        box-shadow: 0 10px 22px rgba(122, 75, 18, 0.12);
+        margin-bottom: 24px;
+      }
+      .banner strong {
+        font-size: 1.05rem;
+      }
+      .banner span {
+        font-size: 0.95rem;
+      }
+      .banner .pill {
+        background: #7a4b12;
+        color: #fff;
+        padding: 4px 10px;
+        border-radius: 999px;
+        font-size: 0.72rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+      @media (max-width: 600px) {
+        .banner {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+      header {
+        margin-bottom: 24px;
+      }
+      h1 {
+        margin: 0 0 8px;
+        font-size: 2.1rem;
+      }
+      h2 {
+        margin: 0 0 12px;
+        font-size: 1.35rem;
+      }
+      h3 {
+        margin: 0 0 8px;
+        font-size: 1.05rem;
+      }
+      p {
+        margin: 0 0 14px;
+        line-height: 1.6;
+      }
+      a {
+        color: #1c4ed8;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .meta {
+        color: #555;
+      }
+      .card {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 22px;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+        margin-bottom: 18px;
+      }
+      .callout {
+        background: #fff6e9;
+        border: 1px solid #f0dcc4;
+        border-radius: 14px;
+        padding: 16px;
+      }
+      ul {
+        margin: 0 0 14px;
+        padding-left: 20px;
+        line-height: 1.6;
+      }
+      .link-row {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-top: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <nav>
+        <a href="/">Home</a>
+        <a href="/features.html">Features</a>
+        <a href="/faq.html">FAQ / Help</a>
+        <a href="/support.html">Contact</a>
+        <a href="/privacy.html">Privacy Policy</a>
+      </nav>
+
+      <header>
+        <div class="banner">
+          <div>
+            <strong>Coming soon</strong>
+            <span>— BiteNoted is still under construction and will be available soon.</span>
+          </div>
+          <div class="pill">Under Construction</div>
+        </div>
+        <h1>FAQ / Help</h1>
+        <p class="meta">Quick answers for the most common BiteNoted questions.</p>
+      </header>
+
+      <section class="card">
+        <h2>iCloud Sync</h2>
+        <p>iCloud Sync is available on every plan. You can toggle it in the BiteNoted Settings screen.</p>
+        <h3>Common troubleshooting steps</h3>
+        <ul>
+          <li>Confirm you are signed in to iCloud in iOS Settings and iCloud Drive is enabled.</li>
+          <li>Check that BiteNoted has iCloud enabled in iOS Settings &gt; Apple ID &gt; iCloud.</li>
+          <li>Open the app on both devices while on Wi-Fi and wait a few minutes for sync to catch up.</li>
+          <li>Make sure Low Power Mode is off and Background App Refresh is enabled.</li>
+          <li>If sync still looks stuck, toggle iCloud Sync off and on in BiteNoted Settings.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Map and Place Search Quirks</h2>
+        <p>BiteNoted uses Apple MapKit for maps and place search. Results can vary by region and may take time to update after a venue changes name or address.</p>
+        <ul>
+          <li>If a place is missing, try searching by street address or a nearby landmark.</li>
+          <li>Short names can be ambiguous; try adding the city or neighborhood.</li>
+          <li>Map results are cached by iOS, so reopening the app can refresh results.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Import, Export, and Backups</h2>
+        <p>You can export entries or create a full backup (zip) from BiteNoted Settings. Exports can be saved to Files, AirDropped, or stored in a cloud drive.</p>
+        <ul>
+          <li>Exports are best for sharing or working with your data outside the app.</li>
+          <li>Full backups are best for restoring your entire journal later.</li>
+          <li>Imports are available in Settings and can restore a prior backup.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Widgets</h2>
+        <p>Widgets are part of the Pro plan. Add them from the iOS widget gallery, then open BiteNoted once so the widget can load data.</p>
+        <ul>
+          <li>If a widget looks blank, open BiteNoted and wait a few seconds.</li>
+          <li>Privacy Lock can hide widget content when enabled.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Privacy Lock</h2>
+        <p>Privacy Lock uses Face ID or Touch ID to lock the app. It also hides widget content when enabled.</p>
+        <ul>
+          <li>If biometrics are disabled on the device, Privacy Lock will fall back to the device passcode.</li>
+          <li>After restarting your device, iOS may require a passcode before Face ID or Touch ID is available.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Ads and Tracking (ATT)</h2>
+        <p>The free plan shows ads. The tracking prompt appears only on the free plan and only if ads are enabled. You can allow or deny tracking in the iOS prompt.</p>
+        <ul>
+          <li>Allowing tracking enables personalized ads.</li>
+          <li>Denying tracking shows non-personalized ads.</li>
+          <li>Purchasing No Ads or Pro removes ads and the tracking prompt.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Restore Purchases</h2>
+        <p>To restore purchases, open BiteNoted Settings and tap Restore Purchases. Make sure you are signed in to the same Apple ID used for the original purchase.</p>
+        <p>If restore does not complete, wait a moment and try again. Apple purchases can occasionally take a minute to sync.</p>
+      </section>
+
+      <section class="card">
+        <h2>No Ads vs Pro</h2>
+        <p>No Ads removes ads from the free plan. Pro unlocks advanced features like full-text search, widgets, Privacy Lock, templates, and future Pro updates.</p>
+        <div class="link-row">
+          <a href="/features.html">See plan details on the Features page</a>
+          <a href="/support.html">Contact support</a>
+        </div>
+      </section>
+
+      <section class="callout">
+        <p>Still stuck? Email us at <a href="mailto:support@bitenoted.app">support@bitenoted.app</a> and include your device model, iOS version, and any screenshots.</p>
+      </section>
+    </main>
+  </body>
+</html>
