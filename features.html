@@ -32,6 +32,30 @@
       header {
         margin-bottom: 32px;
       }
+      .hero {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+      .hero-icon img {
+        width: 84px;
+        height: 84px;
+        border-radius: 18px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+      }
+      .app-store-badge {
+        display: inline-flex;
+        padding: 8px 10px;
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+      }
+      .app-store-badge img {
+        height: 38px;
+        width: auto;
+        display: block;
+      }
       h1 {
         margin: 0 0 10px;
         font-size: 2.3rem;
@@ -81,6 +105,65 @@
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 18px;
       }
+      .pricing-compare {
+        margin-top: 18px;
+        overflow: hidden;
+        border-radius: 18px;
+        border: 1px solid #ece7e2;
+      }
+      .compare-row {
+        display: grid;
+        grid-template-columns: minmax(200px, 2fr) repeat(3, minmax(130px, 1fr));
+        align-items: center;
+        gap: 12px;
+        padding: 14px 18px;
+        border-bottom: 1px solid #f1ebe5;
+        background: #fff;
+      }
+      .compare-row:last-child {
+        border-bottom: none;
+      }
+      .compare-row.header {
+        background: #faf7f3;
+        font-weight: 600;
+      }
+      .compare-row.header .compare-cell {
+        font-size: 0.95rem;
+        letter-spacing: 0.02em;
+      }
+      .compare-cell {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.95rem;
+      }
+      .compare-cell.feature {
+        justify-content: flex-start;
+        text-align: left;
+        font-weight: 500;
+      }
+      .icon-circle {
+        width: 26px;
+        height: 26px;
+        border-radius: 999px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 0.85rem;
+      }
+      .icon-circle.check {
+        background: #e6f6ea;
+        color: #1b8c3b;
+        border: 1px solid #b9e4c6;
+      }
+      .icon-circle.cross {
+        background: #f2f2f2;
+        color: #7a7a7a;
+        border: 1px solid #d8d8d8;
+      }
       .tier {
         position: relative;
         border: 1px solid #ece7e2;
@@ -129,6 +212,17 @@
         h1 {
           font-size: 2rem;
         }
+        .compare-row {
+          grid-template-columns: 1fr;
+          gap: 8px;
+          text-align: left;
+        }
+        .compare-cell {
+          justify-content: flex-start;
+        }
+        .compare-row.header {
+          display: none;
+        }
       }
     </style>
   </head>
@@ -141,8 +235,18 @@
       </nav>
 
       <header>
-        <h1>BiteNoted Features</h1>
-        <p class="meta">A map-first food journal for logging meals, photos, and places.</p>
+        <div class="hero">
+          <div class="hero-icon">
+            <img src="assets/BiteNoted-Icon-256.png" alt="BiteNoted app icon" width="84" height="84" />
+          </div>
+          <div>
+            <h1>BiteNoted Features</h1>
+            <p class="meta">A map-first food journal for logging meals, photos, and places.</p>
+          </div>
+          <a class="app-store-badge" href="#" aria-label="Download on the App Store">
+            <img src="assets/app-store-badge-us.svg" alt="Download on the App Store" />
+          </a>
+        </div>
       </header>
 
       <section class="section card">
@@ -245,6 +349,105 @@
               <li>Shareable stats snapshots</li>
               <li>Create templates from places</li>
             </ul>
+          </div>
+        </div>
+
+        <div class="pricing-compare">
+          <div class="compare-row header">
+            <div class="compare-cell feature">Feature</div>
+            <div class="compare-cell">Free</div>
+            <div class="compare-cell">No Ads</div>
+            <div class="compare-cell">Pro</div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-cell feature">Core journaling + map-first browsing</div>
+            <div class="compare-cell"><span class="icon-circle check">✓</span></div>
+            <div class="compare-cell"><span class="icon-circle check">✓</span></div>
+            <div class="compare-cell"><span class="icon-circle check">✓</span></div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-cell feature">Entry photos + photos grid</div>
+            <div class="compare-cell"><span class="icon-circle check">✓</span></div>
+            <div class="compare-cell"><span class="icon-circle check">✓</span></div>
+            <div class="compare-cell"><span class="icon-circle check">✓</span></div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-cell feature">Places list with map previews</div>
+            <div class="compare-cell"><span class="icon-circle check">✓</span></div>
+            <div class="compare-cell"><span class="icon-circle check">✓</span></div>
+            <div class="compare-cell"><span class="icon-circle check">✓</span></div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-cell feature">Basic search + favorites filtering</div>
+            <div class="compare-cell"><span class="icon-circle check">✓</span></div>
+            <div class="compare-cell"><span class="icon-circle check">✓</span></div>
+            <div class="compare-cell"><span class="icon-circle check">✓</span></div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-cell feature">No ads</div>
+            <div class="compare-cell"><span class="icon-circle cross">✕</span></div>
+            <div class="compare-cell"><span class="icon-circle check">✓</span></div>
+            <div class="compare-cell"><span class="icon-circle check">✓</span></div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-cell feature">Full-text search + advanced filters</div>
+            <div class="compare-cell"><span class="icon-circle cross">✕</span></div>
+            <div class="compare-cell"><span class="icon-circle cross">✕</span></div>
+            <div class="compare-cell"><span class="icon-circle check">✓</span></div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-cell feature">Saved searches</div>
+            <div class="compare-cell"><span class="icon-circle cross">✕</span></div>
+            <div class="compare-cell"><span class="icon-circle cross">✕</span></div>
+            <div class="compare-cell"><span class="icon-circle check">✓</span></div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-cell feature">Templates + Quick Add templates</div>
+            <div class="compare-cell"><span class="icon-circle cross">✕</span></div>
+            <div class="compare-cell"><span class="icon-circle cross">✕</span></div>
+            <div class="compare-cell"><span class="icon-circle check">✓</span></div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-cell feature">Widgets</div>
+            <div class="compare-cell"><span class="icon-circle cross">✕</span></div>
+            <div class="compare-cell"><span class="icon-circle cross">✕</span></div>
+            <div class="compare-cell"><span class="icon-circle check">✓</span></div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-cell feature">Quick Add shortcut</div>
+            <div class="compare-cell"><span class="icon-circle cross">✕</span></div>
+            <div class="compare-cell"><span class="icon-circle cross">✕</span></div>
+            <div class="compare-cell"><span class="icon-circle check">✓</span></div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-cell feature">Insights + map heat view</div>
+            <div class="compare-cell"><span class="icon-circle cross">✕</span></div>
+            <div class="compare-cell"><span class="icon-circle cross">✕</span></div>
+            <div class="compare-cell"><span class="icon-circle check">✓</span></div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-cell feature">Multi-photo entry experience</div>
+            <div class="compare-cell"><span class="icon-circle cross">✕</span></div>
+            <div class="compare-cell"><span class="icon-circle cross">✕</span></div>
+            <div class="compare-cell"><span class="icon-circle check">✓</span></div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-cell feature">Privacy Lock</div>
+            <div class="compare-cell"><span class="icon-circle cross">✕</span></div>
+            <div class="compare-cell"><span class="icon-circle cross">✕</span></div>
+            <div class="compare-cell"><span class="icon-circle check">✓</span></div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-cell feature">Shareable stats snapshots</div>
+            <div class="compare-cell"><span class="icon-circle cross">✕</span></div>
+            <div class="compare-cell"><span class="icon-circle cross">✕</span></div>
+            <div class="compare-cell"><span class="icon-circle check">✓</span></div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-cell feature">Create templates from places</div>
+            <div class="compare-cell"><span class="icon-circle cross">✕</span></div>
+            <div class="compare-cell"><span class="icon-circle cross">✕</span></div>
+            <div class="compare-cell"><span class="icon-circle check">✓</span></div>
           </div>
         </div>
       </section>
