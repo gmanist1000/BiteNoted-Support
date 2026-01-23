@@ -3,4 +3,5 @@ This repository hosts the BiteNoted support site and privacy policy for GitHub P
 
 ## Pages
 - Home: `/`
+- Features: `/features.html`
 - Privacy Policy: `/privacy.html`
